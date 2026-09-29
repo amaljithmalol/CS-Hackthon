@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Beverages">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef7fb" />
+      <stop offset="1" stop-color="#dcecf5" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)" />
+  <ellipse cx="320" cy="312" rx="200" ry="28" fill="#ffffff" opacity="0.8" />
+  <path d="M220 130h70l-10 170a25 25 0 0 1-25 22h0a25 25 0 0 1-25-22z" fill="#f68f16" opacity="0.9" />
+  <rect x="216" y="120" width="78" height="18" rx="9" fill="#0f6d3f" />
+  <path d="M350 160h70l-8 140a25 25 0 0 1-25 20h-4a25 25 0 0 1-25-20z" fill="#1faa5f" opacity="0.9" />
+  <rect x="346" y="150" width="78" height="18" rx="9" fill="#0f6d3f" />
+  <path d="M262 200h70l-6 92a22 22 0 0 1-22 18h-14a22 22 0 0 1-22-18z" fill="#3b82f6" opacity="0.85" />
+  <rect x="258" y="188" width="78" height="18" rx="9" fill="#1d4ed8" />
+  <g fill="#ffffff" opacity="0.75">
+    <rect x="150" y="352" width="120" height="12" rx="6" />
+    <rect x="380" y="352" width="120" height="12" rx="6" />
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Fresh fruits assortment">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2fbf3" />
+      <stop offset="1" stop-color="#dff2e2" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)" />
+  <ellipse cx="320" cy="300" rx="215" ry="32" fill="#ffffff" opacity="0.75" />
+  <circle cx="240" cy="240" r="62" fill="#e8573f" />
+  <circle cx="222" cy="222" r="16" fill="#ffffff" opacity="0.35" />
+  <path d="M240 178c0-16 12-26 26-28-2 16-12 26-26 28z" fill="#3f8f42" />
+  <circle cx="360" cy="248" r="56" fill="#f2b53c" />
+  <circle cx="344" cy="232" r="14" fill="#ffffff" opacity="0.35" />
+  <path d="M360 192c2-16 14-24 28-26-2 16-14 24-28 26z" fill="#3f8f42" />
+  <path d="M430 300c0-38 26-64 60-64s60 26 60 64-26 60-60 60-60-22-60-60z" fill="#e9d06a" />
+  <circle cx="470" cy="290" r="10" fill="#ffffff" opacity="0.4" />
+  <path d="M160 300c0-30 20-50 46-50s46 20 46 50-20 46-46 46-46-16-46-46z" fill="#7bb043" />
+  <path d="M206 250c0-14 8-24 20-26 0 14-8 24-20 26z" fill="#3f8f42" />
+  <g fill="#ffffff" opacity="0.7">
+    <rect x="150" y="356" width="120" height="12" rx="6" />
+    <rect x="390" y="356" width="120" height="12" rx="6" />
+  </g>
+</svg>

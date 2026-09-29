@@ -1,0 +1,256 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------
+   FoodBridge design system
+   Palette: green (primary) · deep forest (headings) · warm amber (food)
+   ------------------------------------------------------------------ */
+@theme {
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+
+  /* Primary green */
+  --color-brand-50: #ecfdf3;
+  --color-brand-100: #d2f8e0;
+  --color-brand-200: #a8f0c4;
+  --color-brand-300: #6fe0a1;
+  --color-brand-400: #3ec87b;
+  --color-brand-500: #1faa5f;
+  --color-brand-600: #12894c;
+  --color-brand-700: #0f6d3f;
+  --color-brand-800: #105636;
+  --color-brand-900: #0f472f;
+  --color-brand-950: #042a1c;
+
+  /* Deep forest — headings */
+  --color-forest-50: #f2f7f4;
+  --color-forest-100: #dfeae3;
+  --color-forest-200: #bed6c7;
+  --color-forest-300: #94b8a4;
+  --color-forest-400: #64957e;
+  --color-forest-500: #467a63;
+  --color-forest-600: #366150;
+  --color-forest-700: #2b4d40;
+  --color-forest-800: #214135;
+  --color-forest-900: #16332a;
+  --color-forest-950: #0a1f19;
+
+  /* Warm amber — food highlights */
+  --color-amber-soft-50: #fff9f0;
+  --color-amber-soft-100: #fff0d9;
+  --color-amber-soft-200: #ffe0b2;
+  --color-amber-soft-300: #ffca7a;
+  --color-amber-soft-400: #fcae3c;
+  --color-amber-soft-500: #f68f16;
+  --color-amber-soft-600: #e06f09;
+  --color-amber-soft-700: #b95309;
+
+  /* Neutrals */
+  --color-canvas: #f7f9f7;
+  --color-surface: #ffffff;
+  --color-muted: #f1f4f2;
+
+  /* Semantic */
+  --color-success-50: #ecfdf3;
+  --color-success-500: #16a34a;
+  --color-success-700: #15803d;
+  --color-warning-50: #fffbeb;
+  --color-warning-500: #f59e0b;
+  --color-warning-700: #b45309;
+  --color-danger-50: #fef2f2;
+  --color-danger-500: #ef4444;
+  --color-danger-700: #b91c1c;
+  --color-info-50: #eff6ff;
+  --color-info-500: #3b82f6;
+  --color-info-700: #1d4ed8;
+
+  /* Elevation */
+  --shadow-soft: 0 1px 2px rgb(16 24 40 / 0.04), 0 8px 24px -12px rgb(16 24 40 / 0.12);
+  --shadow-card: 0 1px 3px rgb(16 24 40 / 0.05), 0 12px 32px -16px rgb(16 24 40 / 0.18);
+  --shadow-lift: 0 2px 6px rgb(16 24 40 / 0.06), 0 24px 48px -20px rgb(16 24 40 / 0.25);
+
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.75rem;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-in: fadeIn 0.4s ease-out both;
+  --animate-slide-up: slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-muted;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-canvas text-forest-900 font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-forest-900 font-semibold tracking-tight;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    @apply outline-brand-600 ring-brand-500/40 rounded-sm ring-2 ring-offset-2 outline-none;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-forest-950;
+  }
+
+  /* Scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-forest-200) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-forest-200);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-forest-300);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-surface rounded-2xl border border-forest-100 shadow-soft;
+  }
+
+  .card-hover {
+    @apply transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lift;
+  }
+
+  .eyebrow {
+    @apply text-brand-700 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] uppercase;
+  }
+
+  .input-base {
+    @apply bg-surface w-full rounded-xl border border-forest-200 px-3.5 py-2.5 text-sm text-forest-900
+      transition placeholder:text-forest-300 focus:border-brand-500 focus:ring-brand-500/25
+      focus:ring-4 focus:outline-none disabled:cursor-not-allowed disabled:bg-muted;
+  }
+
+  .skeleton {
+    @apply bg-forest-100/70 animate-pulse rounded-md;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left
+      after:scale-x-0 after:bg-current after:transition-transform hover:after:scale-x-100;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    background-image: radial-gradient(circle at 1px 1px, rgb(15 71 47 / 0.08) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Leaflet integration */
+.leaflet-container {
+  @apply h-full w-full rounded-2xl bg-muted font-sans;
+  z-index: 0;
+}
+.leaflet-popup-content-wrapper {
+  @apply rounded-xl border border-forest-100 shadow-lift;
+}
+.leaflet-popup-content {
+  @apply m-0 w-64 p-0;
+}
+.leaflet-popup-tip {
+  @apply shadow-soft;
+}
+.leaflet-control-attribution {
+  @apply bg-white/85 text-[10px] text-forest-500;
+}
+.fb-marker {
+  @apply flex items-center justify-center rounded-full border-2 border-white text-white shadow-lift;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
